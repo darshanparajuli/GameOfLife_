@@ -94,8 +94,7 @@ public class MainPanel {
             public void mouseReleased(MouseEvent me) {
                 if (MainPanel.insertPattern.getMouseListeners().length == 2) {
                     String temp = (String) JOptionPane.showInputDialog(dp, "Patterns:", "Patterns", JOptionPane.PLAIN_MESSAGE, null, World.patterns, World.patterns[0]);
-                    if(temp == null)
-                    {
+                    if (temp == null) {
                         return;
                     }
                     try {
@@ -140,13 +139,11 @@ public class MainPanel {
                 if (MainPanel.setCellNum.getMouseListeners().length == 2) {
                     String tempc = (String) JOptionPane.showInputDialog(dp, "Number of Columns: ", "Set Number of Columns", JOptionPane.INFORMATION_MESSAGE);
                     System.out.println(tempc);
-                    if(tempc == null)
-                    {
+                    if (tempc == null) {
                         return;
                     }
                     String tempr = (String) JOptionPane.showInputDialog(dp, "Number of Rows: ", "Set Number of Rows", JOptionPane.INFORMATION_MESSAGE);
-                    if(tempr == null)
-                    {
+                    if (tempr == null) {
                         return;
                     }
                     try {
@@ -348,9 +345,10 @@ public class MainPanel {
                     String fps = (String) JOptionPane.showInputDialog(dp, "Update(s) per frame: ", "Set Speed", JOptionPane.INFORMATION_MESSAGE);
                     try {
                         int f = (Integer.parseInt(fps));
-                        if(f > 240){
+                        if (f > 240) {
                             f = 240;
-                        } if( f <= 0 ){
+                        }
+                        if (f <= 0) {
                             f = 1;
                         }
                         DrawPanel.numUpdatesPerFrame = f;

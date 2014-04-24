@@ -20,7 +20,6 @@ public class Applet extends JApplet {
 
         setName("Game Of Life");
 
-
         jb = new JButton("Click here to start");
         jp.setLayout(new BorderLayout(5, 5));
         jp.setPreferredSize(jb.getPreferredSize());

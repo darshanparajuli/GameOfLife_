@@ -34,16 +34,15 @@ public class FpsCounter {
         this.prevTime = System.nanoTime();
         this.numOfFpsToAvgFrom = 5;
     }
-    
-    public FpsCounter( int n )
-      {
+
+    public FpsCounter(int n) {
         this.tick = 0;
         this.avgFps = 0;
         this.minFps = 0;
         this.maxFps = 0;
         this.prevTime = System.nanoTime();
         this.numOfFpsToAvgFrom = n;
-      }
+    }
 
     public void tick() {
         tick++;
@@ -71,67 +70,54 @@ public class FpsCounter {
             //displayFps();
         }
     }
-    
-    public static double getCurrFps(){
+
+    public static double getCurrFps() {
         return currFps;
     }
-    
-    public double getAvgFps( int n )
-      {
+
+    public double getAvgFps(int n) {
         double f = 0;
-        if ( fps.size() > 0 )
-          {
-            for ( Integer i : fps )
-              {
+        if (fps.size() > 0) {
+            for (Integer i : fps) {
                 f += i;
-              }
+            }
 
             f = f / fps.size();
-          }
-        BigDecimal b = new BigDecimal( f ).setScale( 1, BigDecimal.ROUND_HALF_UP );
+        }
+        BigDecimal b = new BigDecimal(f).setScale(1, BigDecimal.ROUND_HALF_UP);
         return b.doubleValue();
-      }
+    }
 
-    public void printFpsArray()
-      {
-        for ( Integer i : fps )
-          {
-            System.out.println( i );
-          }
-      }
+    public void printFpsArray() {
+        for (Integer i : fps) {
+            System.out.println(i);
+        }
+    }
 
-    public double getMinFps()
-      {
+    public double getMinFps() {
         double f = 0;
-        if ( fps.size() > 0 )
-          {
-            f = fps.get( 0 );
-            for ( Integer i : fps )
-              {
-                if ( f > i )
-                  {
+        if (fps.size() > 0) {
+            f = fps.get(0);
+            for (Integer i : fps) {
+                if (f > i) {
                     f = i;
-                  }
-              }
-          }
+                }
+            }
+        }
         return f;
-      }
+    }
 
-    public double getMaxFps()
-      {
+    public double getMaxFps() {
         double f = 0;
-        if ( fps.size() > 0 )
-          {
-            f = fps.get( 0 );
-            for ( Integer i : fps )
-              {
-                if ( f < i )
-                  {
+        if (fps.size() > 0) {
+            f = fps.get(0);
+            for (Integer i : fps) {
+                if (f < i) {
                     f = i;
-                  }
-              }
-          }
+                }
+            }
+        }
         return f;
-      }
+    }
 
 }
