@@ -2,6 +2,10 @@ package gameOfLife;
 
 public final class PatternBank {
 
+    private PatternBank() {
+
+    }
+
     public static int[][] glider = {
             {1, 0, 1},
             {0, 1, 1},

@@ -61,7 +61,6 @@ public class DrawPanel extends JPanel implements Runnable, KeyListener, MouseLis
 
     @Override
     public void run() {
-
         long beforeTime, afterTime, timeDiff, sleepTime;
         long overSleepTime = 0L;
         int noDelays = 0;
@@ -256,7 +255,6 @@ public class DrawPanel extends JPanel implements Runnable, KeyListener, MouseLis
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
         if (e.getButton() == MouseEvent.BUTTON1) {
             if (e.getX() < PWIDTH && e.getY() < PHEIGHT && e.getX() > 0 && e.getY() > 0) {
                 try {
